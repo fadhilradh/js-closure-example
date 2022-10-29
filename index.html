@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // test this in sources tab on browser (chrome)
+      function normalFunctionIncrement() {
+        var x = 0; // add breakpoint here
+        x++;
+      }
+
+      function closureFunction() {
+        var x = 0;
+
+        function increment() {
+          x++; // add breakpoint here
+        }
+
+        return { increment };
+      }
+
+      normalFunctionIncrement(); // add breakpoint here
+      normalFunctionIncrement(); // add breakpoint here
+      normalFunctionIncrement(); // add breakpoint here
+      normalFunctionIncrement(); // add breakpoint here
+
+      var closureFunction = closureFunction();
+
+      closureFunction.increment(); // add breakpoint here
+      closureFunction.increment(); // add breakpoint here
+      closureFunction.increment(); // add breakpoint here
+      closureFunction.increment(); // add breakpoint here
+      closureFunction.increment(); // add breakpoint here
+    </script>
+  </body>
+</html>
